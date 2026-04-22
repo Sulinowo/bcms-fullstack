@@ -20,7 +20,7 @@ Stamtąd będziemy przenosić domenę i flow ekranów; w tym repo stawiamy **św
 
 | Katalog      | Rola                          |
 | ------------ | ----------------------------- |
-| `apps/web`   | Frontend — **Vite + React 19 + TypeScript** |
+| `apps/web`   | Frontend — **Vite + React 19 + TypeScript + Tailwind v4 + React Router + Storybook** |
 | `apps/api`   | Backend — **Django 5 + Django REST Framework** |
 
 ## Uruchomienie
@@ -31,6 +31,7 @@ Stamtąd będziemy przenosić domenę i flow ekranów; w tym repo stawiamy **św
 cd apps/web
 npm install   # pierwszy raz
 npm run dev   # http://localhost:5173
+npm run storybook   # http://localhost:6006 — komponenty UI
 ```
 
 ### API (`apps/api`)

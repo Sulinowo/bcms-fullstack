@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Docs/Foundations" />
+
+# Foundations
+
+Tokeny kolorów i typografia są zdefiniowane w `src/index.css` (`@theme`). Poniżej skrót dla Storybooka — w komponentach używaj klas Tailwind (`bg-primary`, `text-on-surface` itd.).
+
+## Typografia
+
+<div className="sb-unstyled space-y-6 font-sans">
+  <div>
+    <p className="text-xs uppercase tracking-wide text-secondary">Nagłówek strony</p>
+    <p className="text-3xl font-bold text-on-surface">BCMS — Bank krwi</p>
+  </div>
+  <div>
+    <p className="text-xs uppercase tracking-wide text-secondary">Sekcja</p>
+    <p className="text-xl font-semibold text-on-surface">Lista dawców</p>
+  </div>
+  <div>
+    <p className="text-xs uppercase tracking-wide text-secondary">Tekst podstawowy</p>
+    <p className="text-base leading-6 text-on-background">
+      Inter, antialiased — treść formularzy, opisy błędów i etykiety pól.
+    </p>
+  </div>
+  <div>
+    <p className="text-xs uppercase tracking-wide text-on-surface-variant">Drugorzędny</p>
+    <p className="text-sm text-secondary">Podpowiedź, metadane, data ostatniej aktualizacji.</p>
+  </div>
+</div>
+
+## Kolory (tokeny)
+
+<div className="sb-unstyled grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-primary" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">primary</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="flex h-14 items-center justify-center bg-on-primary text-sm font-medium text-primary">Aa</div>
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">on-primary (tekst primary)</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-background" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">background</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-surface-container" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">surface-container</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-surface-container-low" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">surface-container-low</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-error" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">error</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-frame" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">frame (obramowania)</p>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-frame dark:border-zinc-700">
+    <div className="h-14 bg-frame-strong" />
+    <p className="px-3 py-2 text-sm font-medium text-on-surface">frame-strong</p>
+  </div>
+</div>
+
+## Użycie w kodzie
+
+- Tło aplikacji: `bg-background`, tekst główny: `text-on-background` / `text-on-surface`, tekst pomocniczy: `text-secondary` lub `text-on-surface-variant`.
+- Akcenty i CTA: `bg-primary`, `text-on-primary`.
+- Powierzchnie kart i pól: `bg-surface-container`, `bg-surface-container-low`; karty: `border-frame` zamiast bladego `gray-100`.
+
+Pełna lista znajduje się w `@theme` w pliku `index.css`.

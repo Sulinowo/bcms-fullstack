@@ -10,6 +10,9 @@ __pycache__/
 .venv/
 venv/
 *.sqlite3
+
+# Stitch / design exports (large PNGs; źródło: zip lokalnie)
+apps/web/design-reference/
 .env
 .env.*
 !.env.example
